@@ -1,0 +1,543 @@
+.birth_bl {
+    &__top {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+    }
+    &__button {
+        border: 0;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: #F7F7F7;
+        transition: all .3s ease-out;
+        padding: 4px 12px;
+        background: #B6B6C6;
+        margin-bottom: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        &:hover {
+            background: #00B0DE;
+        }
+        &.isActive {
+            background: #00B0DE;
+        }
+    }
+    &__blocks {
+
+    }
+    &__block {
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 28px;
+        display: flex;
+        align-items: flex-start;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+    &__l-side {
+        width: 33.5%;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 140%;
+        color: #131313;
+    }
+    &__r-side {
+        width: 66.5%;
+    }
+    &__card {
+        &:not(:first-child) {
+            margin-top: 24px;
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    &__avatar {
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 12px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__name {
+        width: 100%;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #131313;
+    }
+    &__work {
+        padding: 16px 24px;
+        background: #F7FAFB;
+        border-radius: 10px 0px 0px 10px;
+        width: calc(100% + 28px);
+    }
+    &__tit {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #9797A5;
+        margin-bottom: 2px;
+    }
+    &__subtit {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #131313;
+    }
+    &__hide_bl {
+        display: none;
+    }
+}
+.dates {
+    &__blocks {
+        padding: 28px;
+        padding-bottom: 8px;
+        background: #fff;
+        .date_block {
+            width: calc(33.33% - 22px);
+            margin-left: 11px;
+            margin-right: 11px;
+            position: relative;
+            margin-bottom: 20px;
+            border: 1px solid #E8E8E8;
+            border-radius: 10px;
+            padding: 12px;
+            @media all and (max-width: 1360px) {
+                width: calc(50% - 22px);
+            }
+        }
+    }
+    &__item {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-left: -11px;
+        margin-right: -11px;
+    }
+    .datepicker-picker {
+        width: 100%;
+    }
+    .datepicker-header .datepicker-controls .button {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;
+        color: #000;
+        pointer-events: none;
+    }
+    .datepicker-controls .prev-btn {
+        display: none;
+    }
+    .datepicker-controls .next-btn {
+        display: none;
+    }
+    .datepicker-cell.selected, .datepicker-cell.selected:hover {
+        background-color: #006FAB;
+    }
+    .datepicker-view.datepicker-grid .datepicker-cell {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .datepicker-view {
+        width: 100%;
+        .days {
+            width: 100%;
+            .days-of-week {
+                margin-bottom: 10px;
+                .dow {
+                    font-family: 'HeliosC', serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    line-height: 120%;
+                    letter-spacing: 0.01em;
+                    color: #9E9EB0;
+                }
+            }
+            .datepicker-grid {
+                width: 100%;
+                .datepicker-cell {
+                    font-family: 'HeliosC', serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 120%;
+                    letter-spacing: 0.01em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #131313;
+                    border-radius: 50%;
+                    &.prev, &.next {
+                        color: #B6B6C6;
+                        opacity: 0.5;
+                    }
+                    &.selected {
+                        color: #fff;
+                        background: url("data:image/svg+xml,%3Csvg width='37' height='37' viewBox='0 0 37 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.833252 18.5835C0.833252 8.64237 8.89213 0.583496 18.8333 0.583496V0.583496C28.7744 0.583496 36.8333 8.64237 36.8333 18.5835V18.5835C36.8333 28.5246 28.7744 36.5835 18.8333 36.5835V36.5835C8.89213 36.5835 0.833252 28.5246 0.833252 18.5835V18.5835Z' fill='%23006FAB'/%3E%3C/svg%3E%0A") 50% no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .datepicker-header .datepicker-controls {
+        margin-bottom: 10px;
+    }
+    &__top {
+        background: #F7FAFB;
+        padding: 32px;
+        .date_year {
+            font-family: 'HeliosC', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 140%;
+            text-align: center;
+            color: #131313;
+        }
+        .slick-prev {
+            width: 24px;
+            height: 24px;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+            margin-top: -12px;
+            top: 50%;
+            font-size: 0;
+            left: calc(50% - 90px);
+            transform: unset;
+            z-index: 10;
+            &:before {
+                display: none;
+            }
+        }
+        .slick-next {
+            width: 24px;
+            height: 24px;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.17217 7.00072L0.222168 2.05072L1.63617 0.636719L8.00017 7.00072L1.63617 13.3647L0.222168 11.9507L5.17217 7.00072Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+            margin-top: -12px;
+            top: 50%;
+            font-size: 0;
+            right: calc(50% - 90px);
+            transform: unset;
+            z-index: 10;
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+.isTablet, .isMobile {
+    .birth_bl {
+        &__top {
+            margin-bottom: 4px;
+        }
+        &__block {
+            flex-direction: column;
+            background: none;
+            border-radius: 0;
+            padding: 0;
+            margin: 0;
+        }
+        &__l-side {
+            display: none;
+        }
+        &__hide_bl {
+            font-family: 'HeliosC', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 140%;
+            color: #131313;
+            display: block;
+            text-align: center;
+            margin-right: 0;
+            margin-bottom: 8px;
+            margin-top: 12px;
+        }
+        &__r-side {
+            width: 100%;
+        }
+        &__item {
+            padding: 16px;
+            background: #FFFFFF;
+            border-radius: 10px;
+        }
+        &__name {
+            font-size: 14px;
+        }
+        &__work {
+            padding: 16px 20px;
+            width: calc(100% + 16px);
+        }
+        &__tit {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        &__subtit {
+            font-size: 16px;
+        }
+    }
+}
+.isMobile {
+    .dates {
+        &__blocks {
+            padding: 0;
+            background: none;
+        }
+        &__item {
+            margin: 0;
+            .date_block {
+                width: 100%;
+                margin-left: 0;
+                border: 0;
+                background: #fff;
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+            .datepicker-view .days .datepicker-grid .datepicker-cell.selected {
+                @media all and (max-width: 350px) {
+                    background: #006FAB;
+                }
+            }
+        }
+        &__top {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding: 24px;
+            margin-bottom: 24px;
+            margin-top: -30px;
+            background: #006FAB;
+            .date_year {
+                color: #fff;
+            }
+            .slick-prev {
+                left: 0px;
+                background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z' fill='%23ffffff'/%3E%3C/svg%3E%0A") 50% no-repeat;
+            }
+            .slick-next {
+                right: 0;
+                background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.17217 7.00072L0.222168 2.05072L1.63617 0.636719L8.00017 7.00072L1.63617 13.3647L0.222168 11.9507L5.17217 7.00072Z' fill='%23ffffff'/%3E%3C/svg%3E%0A") 50% no-repeat;
+            }
+        }
+    }
+}
+
+// feedback
+.form-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: -68%;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    @media all and (max-width: 1023px) {
+        bottom: unset;
+        top: 0px;
+        height: auto;
+    }
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+    }
+    .form-wrapper-inner {
+        width: 100%;
+        background: #FFFFFF;
+        border-radius: 10px;
+        position: relative;
+        padding-bottom: 30px;
+        box-shadow: 0px 0px 23px -3px #c4c4c4;
+    }
+    .calendar_block__block, .calendar_block__block {
+        @media all and (max-width: 1023px) {
+            height: auto !important;
+        }
+    }
+    .icon-close {
+        position: absolute;
+        top: 24px;
+        right: 22px;
+        width: 20px;
+        font-size: 0;
+        height: 20px;
+        cursor: pointer;
+        background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 8.586L12.828 5.757L14.243 7.172L11.414 10L14.243 12.828L12.828 14.243L10 11.414L7.172 14.243L5.757 12.828L8.586 10L5.757 7.172L7.172 5.757L10 8.586Z' fill='%23B6B6C6'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        @media all and (max-width: 1023px) {
+            position: relative;
+            top: unset;
+            right: unset;
+            padding-left: 64px;
+            font-family: 'HeliosC', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: #131313;
+            height: 64px;
+            line-height: 64px;
+            background: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='16' fill='%23006FAB'/%3E%3Cpath d='M13.828 16.0007L18.778 20.9507L17.364 22.3647L11 16.0007L17.364 9.63672L18.778 11.0507L13.828 16.0007Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        }
+    }
+    .calendar_block__top {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+        color: #131313;
+        padding: 20px;
+        border-bottom: 1px solid #E8E8E8;
+        @media all and (max-width: 1023px) {
+            display: block;
+            background: #F7FAFB !important;
+            border: 0;
+        }
+    }
+    .calendar_block__blocks {
+        .calendar_block__bl {
+            padding: 16px 20px;
+            border-bottom: 1px solid #E8E8E8;
+            span {
+                display: inline-block;
+                font-family: 'HeliosC', serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: 0.01em;
+                color: #9797A5;
+                @media all and (max-width: 1023px) {
+                    font-size: 14px;
+                }
+            }
+            .calendar_block--name {
+                font-family: 'HeliosC', serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: 0.01em;
+                color: #131313;
+            }
+        }
+    }
+    .slick-list {
+        pointer-events: none;
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: -40px !important;
+        right: 20px;
+        bottom: unset;
+        width: max-content;
+        li {
+            margin: 0;
+            width: 12px;
+            height: 12px;
+            padding: 0;
+            margin-left: 12px;
+            &.slick-active {
+                button {
+                    background: url('../img/dot.png') 50% / 100% no-repeat;
+                }
+            }
+            button {
+                width: 12px;
+                height: 12px;
+                transition: all .3s ease-out;
+                font-size: 0;
+                background: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3' cy='3' r='3' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .slick-prev {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid #131313;
+        transition: all .3s ease-out;
+        background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.828 7.00023L7.778 11.9502L6.364 13.3642L0 7.00023L6.364 0.63623L7.778 2.05023L2.828 7.00023Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        position: absolute;
+        bottom: -47px !important;;
+        left: 20px;
+        top: unset;
+        right: unset;
+        transform: unset;
+        font-size: 0;
+        &:before {
+            display: none;
+        }
+        &.slick-disabled {
+            border-color: #E8E8E8;
+            pointer-events: none;
+        }
+    }
+    .slick-next {
+        background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.17192 7.00023L0.221924 2.05023L1.63592 0.63623L7.99992 7.00023L1.63592 13.3642L0.221924 11.9502L5.17192 7.00023Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        left: 60px;
+        bottom: -47px !important;;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid #131313;
+        transition: all .3s ease-out;
+        top: unset;
+        right: unset;
+        transform: unset;
+        font-size: 0;
+        &:before {
+            display: none;
+        }
+        &.slick-disabled {
+            border-color: #E8E8E8;
+            pointer-events: none;
+        }
+    }
+}
+// feedback end

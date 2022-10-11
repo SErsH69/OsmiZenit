@@ -1,0 +1,199 @@
+<div class="news_m_bl">
+    <div class="tabs_block">
+        <div class="review">
+            <div class="review__tabs">
+                <ul>
+                    <li class="review__btn" id="review__block-1">Новости администрации</li>
+                    <li class="review__btn" id="review__block-2">Новости всех пользователей</li>
+                    <li class="review__btn" id="review__block-3">Новости подписанных</li>
+                </ul>
+                <div class="review__button"></div>
+            </div>
+            <div class="review__blocks">
+                <div class="review__block review__block-1">
+                    <div class="news_m_bl__top">
+                        <div class="news_m_bl__button" @click="tabsBlock.setSelected('all')"><span>Все</span></div>
+                        <div class="news_m_bl__button" v-for="button in tabsBlock.buttonsArray" :key="button.index" @click="tabsBlock.setSelected(button.value)" :class="{'isActive' : button.value === tabsBlock.selected}">{{ button.name }}</div>
+                    </div>
+                    <div class="news_m_bl__blocks">
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__l-side"><img src="./img/img1.jpg" alt=""></div>
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__l-side"><img src="./img/img1.jpg" alt=""></div>
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__l-side"><img src="./img/img1.jpg" alt=""></div>
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages_bl">
+                        <a href="#" class="pages_bl__prev isDesabled"></a>
+                        <span class="pages_bl__link isActive">1</span>
+                        <a href="#" class="pages_bl__link">2</a>
+                        <a href="#" class="pages_bl__link">3</a>
+                        <a href="#" class="pages_bl__link">4</a>
+                        <a href="#" class="pages_bl__link">5</a>
+                        <a href="#" class="pages_bl__link">...</a>
+                        <a href="#" class="pages_bl__link">12</a>
+                        <a href="#" class="pages_bl__next"></a>
+                    </div>
+                </div>
+                <div class="review__block review__block-2">
+                    <div class="news_m_bl__top">
+                        <button class="news_m_bl__button isActive">Все</button>
+                        <button class="news_m_bl__button">Мероприятия</button>
+                        <button class="news_m_bl__button">Развлечения</button>
+                    </div>
+                    <div class="news_m_bl__blocks">
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages_bl">
+                        <a href="#" class="pages_bl__prev isDesabled"></a>
+                        <span class="pages_bl__link isActive">1</span>
+                        <a href="#" class="pages_bl__link">2</a>
+                        <a href="#" class="pages_bl__link">3</a>
+                        <a href="#" class="pages_bl__link">4</a>
+                        <a href="#" class="pages_bl__link">5</a>
+                        <a href="#" class="pages_bl__link">...</a>
+                        <a href="#" class="pages_bl__link">12</a>
+                        <a href="#" class="pages_bl__next"></a>
+                    </div>
+                </div>
+                <div class="review__block review__block-3">
+                    <div class="news_m_bl__top">
+                        <button class="news_m_bl__button isActive">Все</button>
+                        <button class="news_m_bl__button">Дела</button>
+                        <button class="news_m_bl__button">Сходка</button>
+                    </div>
+                    <div class="news_m_bl__blocks">
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                        <div class="news_m_bl__block">
+                            <div class="news_m_bl__r-side">
+                                <div class="news_m_bl__info">
+                                    <div class="news_m_bl__date">10.06.2022</div>
+                                    <div class="news_m_bl__name">Петр Попов</div>
+                                    <a href="#" class="news_m_bl__follow">Подписаться</a>
+                                </div>
+                                <a href="#" class="news_m_bl__title">Концерт группы Imagine Dragons, в рамках европейского тура Mercury World Tour </a>
+                                <div class="news_m_bl__text">В рамках европейского тура Mercury World Tour легендарная американская группа Imagine Dragons должна была приехать в Санкт-Петербург 7 июня 2022 года на стадион «Газпром Арена» со своим новым альбомом Mercury.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages_bl">
+                        <a href="#" class="pages_bl__prev isDesabled"></a>
+                        <span class="pages_bl__link isActive">1</span>
+                        <a href="#" class="pages_bl__link">2</a>
+                        <a href="#" class="pages_bl__link">3</a>
+                        <a href="#" class="pages_bl__link">4</a>
+                        <a href="#" class="pages_bl__link">5</a>
+                        <a href="#" class="pages_bl__link">...</a>
+                        <a href="#" class="pages_bl__link">12</a>
+                        <a href="#" class="pages_bl__next"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

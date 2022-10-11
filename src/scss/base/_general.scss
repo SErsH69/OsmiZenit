@@ -1,0 +1,191 @@
+body {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #F7F7F7;
+    position: relative;
+}
+
+.owh {
+    overflow: hidden;
+    body {
+        overflow: hidden;
+    }
+    .wrapper {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;    
+    height: inherit;
+    // &.isTablet, &.isMobile {
+    //     overflow: unset;
+    // }
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.center_block {
+    max-width: 1500px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+textarea {
+    resize: none;
+}
+
+// scrollbar
+/* width */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+    background: #292B3A;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #006FAB;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #006FAB;
+}
+// scrollbar end
+@import './node_modules/vanillajs-datepicker/sass/datepicker';
+.pages_bl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    &__prev {
+        margin-right: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        transition: all .3s ease-out;
+        cursor: pointer;
+        background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        &:hover {
+            background: #006FAB url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z' fill='%23ffffff'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        }
+        &.isDesabled {
+            pointer-events: none;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z' fill='%23B6B6C6'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        }
+    }
+    &__link {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        transition: all .3s ease-out;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: normal;
+        color: #212121;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background: #006FAB;
+            color: #fff;
+        }
+        &.isActive {
+            pointer-events: none;
+            background: #006FAB;
+            color: #fff;
+        }
+    }
+    &__next {
+        margin-left: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        transition: all .3s ease-out;
+        cursor: pointer;
+        background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.17217 7.00072L0.222168 2.05072L1.63617 0.636719L8.00017 7.00072L1.63617 13.3647L0.222168 11.9507L5.17217 7.00072Z' fill='%23131313'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        &:hover {
+            background: #006FAB url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.17217 7.00072L0.222168 2.05072L1.63617 0.636719L8.00017 7.00072L1.63617 13.3647L0.222168 11.9507L5.17217 7.00072Z' fill='%23ffffff'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        }
+        &.isDesabled {
+            pointer-events: none;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.17217 7.00072L0.222168 2.05072L1.63617 0.636719L8.00017 7.00072L1.63617 13.3647L0.222168 11.9507L5.17217 7.00072Z' fill='%23B6B6C6'/%3E%3C/svg%3E%0A") 50% no-repeat;
+        }
+    }
+}
+.bottom_module {
+    display: flex;
+    justify-content: space-between;
+    @media all and (max-width: 1340px) {
+        flex-direction: column-reverse;
+    }
+    &__l-side {
+        flex: 0 0 335px;
+        width: 335px;
+        margin-right: 38px;
+        @media all and (max-width: 1340px) {
+            flex: none;
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+    &__r-side {
+        width: calc(100% - 373px);
+        @media all and (max-width: 1340px) {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+    }
+}
+.isTablet, .isMobile {
+    .bottom_module {
+        &__l-side {
+            display: none;
+        }
+        &__r-side {
+            width: 100%;
+        }
+    }
+    .pages_bl {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

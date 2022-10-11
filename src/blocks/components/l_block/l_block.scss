@@ -1,0 +1,51 @@
+.l_block {
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    &__title {
+        font-family: 'HeliosC', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 140%;
+        color: #131313;
+        margin-bottom: 40px;
+    }
+    &__menu {
+        margin-bottom: 64px;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                a {
+                    font-family: 'HeliosC', serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    text-decoration: none;
+                    color: #131313;
+                    &:hover, &.isActive {
+                        color: #006FAB;
+                    }
+                }
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+    &.block_calend {
+        .calendar_block {
+            order: 2;
+        }
+    }
+}
+.isTablet, .isMobile {
+    .l_block {
+        &.block_calend {
+
+        }
+    }
+}

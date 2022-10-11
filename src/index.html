@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://apps.elfsight.com/p/platform.js"></script>
+</head>
+<body class="main_page">
+    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
+        @@include('blocks/modules/header/header.html', {
+            "type" : "",
+        })
+        <main class="content center_block">
+            @@include('blocks/modules/aside_l/aside_l.html', {})
+            @@include('blocks/modules/main_content/main_content.html', {})
+            @@include('blocks/modules/aside_r/aside_r.html', {})
+        </main>
+        @@include('blocks/modules/footer/footer.html', {})
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
